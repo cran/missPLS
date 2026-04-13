@@ -1,0 +1,39 @@
+citHeader("To cite the missPLS package in publications use:")
+
+titl <- meta$Title
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
+vers <- paste("R package version", meta$Version)
+doi <- paste0("10.32614/CRAN.package.", meta$Package)
+urldoi <- paste0("https://doi.org/", doi)
+
+bibentry(bibtype="Manual",
+         title = titl,
+         author = c(person(given = "Titin Agustin", family= "Nengsih"),
+         person(given = "Myriam", family= "Maumy-Bertrand"),
+         person(given = "Frederic", family= "Bertrand")
+         ),
+         year         = year,
+         note         = vers,
+         url          = "https://CRAN.R-project.org/package=missPLS",
+#         doi         = doi,
+         textVersion =
+         paste("Frédéric Bertrand (",year ,"). ",
+               titl, ", ", vers,
+#               ". doi:", doi,
+               ".", sep=""
+               )
+)
+
+bibentry(bibtype="Article",
+         title = "Determining the number of components in PLS regression on incomplete data set",
+         author = c(person(given = "Titin Agustin", family= "Nengsih"),
+                  person(given = "Frederic", family= "Bertrand"),
+                  person(given = "Myriam", family= "Maumy-Bertrand"),
+                  person(given = "Nicolas", family= "Meyer")),
+         year         = 2019,
+         journal = "Statistical Applications in Genetics and Molecular Biology",
+         doi = "10.1515/sagmb-2018-0059",
+         textVersion =
+         paste("T. A. Nengsih, F. Bertrand, M. Maumy-Bertrand, N. Meyer (2019).", "Determining the number of components in PLS regression on incomplete data set", "Statistical Applications in Genetics and Molecular Biology,", "doi:10.1515/sagmb-2018-0059." )
+)
+
