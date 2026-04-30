@@ -1,6 +1,6 @@
-0e2c217b5b533ccb8ca1441545672ffe *DESCRIPTION
+327d5beb7a148a3d9c585da5dec3fec8 *DESCRIPTION
 fe040ba59dde1f504bb5367435b0a425 *NAMESPACE
-91f4e5f4a45d92109bde672f3669664c *NEWS.md
+520d999042a06786a38db9bc490c9646 *NEWS.md
 a99c033e5064ca38955509c7de4fd2ef *R/add_missingness.R
 4a3cd5c09d1cdb1984f7d20ed5c4f24d *R/classes.R
 1eec2f6e762b649f4ba63e77a53f20dd *R/datasets.R
@@ -23,7 +23,7 @@ ffaaa4c99902abaecf7649ac9804d70a *data/tetracycline.rda
 969d2cc1652d84b6feaa2cbdb81a2a1e *inst/_pkgdown.yml
 072a46720a2ca7e59db81d722af5b4a5 *inst/doc/missPLS.R
 4bb5b05b3dea4a4b1b43ac799ee05c47 *inst/doc/missPLS.Rmd
-c4324c4e84d4b0f5bf24ffa59d53b9e5 *inst/doc/missPLS.html
+676a903771222633c4573fc90eb7ae76 *inst/doc/missPLS.html
 a675310a8abca02d7baffbfb00791686 *man/add_missingness.Rd
 fd759271513a1436f66692290cefc897 *man/bromhexine.Rd
 0efb6eb286507efbd65544f4dec3cd57 *man/diagnose_real_data.Rd
@@ -41,7 +41,7 @@ a9e37779af376217e318e3951bc3d730 *tests/testthat.R
 0b17c47b31db6878694ca5e1da788c0c *tests/testthat/test-datasets.R
 62a3197294a55cf2a8258d83d3ff0f6d *tests/testthat/test-imputation.R
 2dc7d79912f4087e2cb5c987bf007b59 *tests/testthat/test-missingness.R
-ff2e48d39afd9e1bc2ba58026ccef7a9 *tests/testthat/test-selection.R
+7404a67af3208b14383b148539afebad *tests/testthat/test-selection.R
 165928034d92762cbf6b36b3a9f834ae *tests/testthat/test-study-runners.R
 b8c14bfb7b6fb637254e5891c0377ab9 *tools/repro_helpers.R
 532f48912ae070b4615435d692d5bcb8 *tools/run_complete_data_simulations.R

@@ -21,7 +21,6 @@ test_that("complete-data selection matches direct plsRglm outputs", {
 
 test_that("complete-data Q2 uses the documented cv.plsR interface", {
   sim <- simulate_pls_data(n = 30, p = 12, true_ncomp = 2, seed = 1)
-  PLS_lm <- missPLS:::PLS_lm
   PLS_lm_kfoldcv <- missPLS:::PLS_lm_kfoldcv
 
   set.seed(11)
@@ -38,7 +37,14 @@ test_that("complete-data Q2 uses the documented cv.plsR interface", {
     verbose = FALSE
   )[[1]]
 
-  expect_identical(via_cv_plsR, via_kfold)
+  expect_identical(dim(via_cv_plsR), dim(via_kfold))
+  expect_identical(rownames(via_cv_plsR), rownames(via_kfold))
+  expect_identical(colnames(via_cv_plsR), colnames(via_kfold))
+  expect_equal(unname(via_cv_plsR), unname(via_kfold), tolerance = 1e-8)
+
+  selected_cv <- missPLS:::.q2_selected_ncomp(via_cv_plsR[-1, "Q2_Y"], threshold = 0.0975)
+  selected_kfold <- missPLS:::.q2_selected_ncomp(via_kfold[-1, "Q2_Y"], threshold = 0.0975)
+  expect_identical(selected_cv, selected_kfold)
 })
 
 test_that("incomplete-data selection returns a stable schema", {

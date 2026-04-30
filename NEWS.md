@@ -1,3 +1,18 @@
+# missPLS 0.2.1
+
+* Improved test portability across BLAS/LAPACK implementations, including MKL,
+  by comparing complete-data Q2 cross-validation summaries with a numeric
+  tolerance while keeping exact selected-component parity checks.
+
+# missPLS 0.2.0
+
+* Complete-data selection now degrades cleanly when optional `plsdof` is not
+  installed, falling back to the naive information-criterion columns when
+  degree-of-freedom based criteria are unavailable.
+* Removed fixed default RNG seeds from the public API and avoided implicit
+  writes to the user's home filespace; long-run reproduction scripts now
+  default to `tempdir()` unless an explicit output directory is supplied.
+
 # missPLS 0.1.0
 
 * Initial package release.
